@@ -8,7 +8,10 @@ const Navbar = () => {
         {/* Logo */}
         <h2 className="text-2xl font-semibold">
           <NavLink to="https://krishangsharma.vercel.app">
-            <span className="text-primary">Krishang </span>Sharma
+            <span className="text-primary">
+              Krishang <span className="text-white">Sharma</span>{" "}
+              <span className="text-white text-sm">/Blogs</span>{" "}
+            </span>{" "}
           </NavLink>
         </h2>
 
@@ -25,15 +28,6 @@ const Navbar = () => {
             Projects{" "}
           </NavLink>
         </div>
-      </div>
-      {/* Mail Butotn */}
-      <div>
-        <NavLink
-          to="mailto:https://krishang.sharma.17704@gmail.com"
-          className="bg-primary border border-transparent rounded-md text-white px-5 py-2 hidden md:block"
-        >
-          Contact Me
-        </NavLink>
       </div>
     </nav>
   );
