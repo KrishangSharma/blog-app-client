@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap");
+
+/* Tailwind CSS Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 16px;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  margin: 0 20px;
+  transform: rotate(180);
+}
+
+.full-screen {
+  height: calc(100vh - 80px);
+}
+
+.img-container {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.img-container > img {
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  transform: scale(1.25);
+}
+
+.blog-container ol,
+.blog-container ul {
+  padding: 10px 15px;
+  margin: 5px 10px;
+}
+
+.blog-container ol li,
+.blog-container ul li {
+  padding: 5px;
+}
+
+.blog-container ol {
+  list-style: number;
+}
+
+.blog-container ul {
+  list-style: disc;
+}
+
+blockquote {
+  padding-left: 15px;
+  margin: 15px 0;
+  border-left: 5px solid rgba(84, 84, 84, 0.5);
+}
+
+.blog-container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.blog-container h2 {
+  font-size: 1.8rem;
+  line-height: normal;
+  font-weight: 600;
+}
+
+.blog-container h3 {
+  line-height: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.blog-container a {
+  color: #570bda;
+  text-decoration: underline;
+}
+
+.blog-card {
+  gap: 15px;
+  width: 100%;
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+}
