@@ -23,7 +23,7 @@ const BlogCard = ({ title, desc, dateAdded, id }) => {
         </Link>
         <span className="text-gray md:w-1/6 text-right ">{formattedDate}</span>
       </div>
-      <p className="text-sm">{desc}</p>
+      <p className="text-sm text-gray">{desc}</p>
     </div>
   );
 };

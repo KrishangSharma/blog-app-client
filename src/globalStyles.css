@@ -80,7 +80,7 @@ blockquote {
 }
 
 .blog-container a {
-  color: #570bda;
+  color: #2f27ce;
   text-decoration: underline;
 }
 
@@ -89,7 +89,7 @@ blockquote {
   width: 100%;
   display: flex;
   padding: 15px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #dedcff;
   flex-direction: column;
   transition: 0.2s ease-in-out;
 }

@@ -6,7 +6,7 @@ import { Navbar, Footer, Blog } from "./components/exports";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden ">
+    <div className="flex flex-col min-h-screen overflow-hidden bg-background text-text">
       <Router>
         <Navbar />
         <Routes>

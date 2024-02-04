@@ -4,13 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        transparent: "transparent",
-        black: "#010005",
-        white: "#F5F1FE",
         gray: "#404040",
-        accent: "#AF0808",
-        primary: "#570BDA",
-        elevation: "#131313",
+        text: "#050315",
+        background: "#fbfbfe",
+        primary: "#2f27ce",
+        secondary: "#dedcff",
+        accent: "#433bff",
       },
       fontFamily: {
         display: "Poppins",

@@ -79,7 +79,7 @@ const Blog = () => {
           </div>
         ) : (
           <>
-            <h1>{blog.title}</h1>
+            <h1 className="text-primary">{blog.title}</h1>
             <span className="text-gray text-md">
               Published On: {formattedDate}
             </span>

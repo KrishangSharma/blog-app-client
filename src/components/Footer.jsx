@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="mt-auto w-100 bg-elevation">
+    <div className="mt-auto w-100 bg-elevation border-t border-secondary ">
       <footer className="w-full py-5 px-2 bg-elevation flex flex-col gap-10 items-start md:w-full md:flex-row md:justify-evenly md:items-center lg:w-5/6 lg:mx-auto lg:px-0 lg:flex-row lg:justify-between">
         {/* Personal Info */}
         <aside className="flex flex-col gap-3">
