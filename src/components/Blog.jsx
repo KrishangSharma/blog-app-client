@@ -10,17 +10,21 @@ const Blog = () => {
 
   const serverURL = import.meta.env.VITE_SERVER_URL;
   const secret = import.meta.env.VITE_API_SECRET;
+  const mode = import.meta.env.VITE_DEV_MODE;
 
   // Make a get request to the server
   useEffect(() => {
     async function getBlogById() {
       try {
         setLoading(true);
-        const response = await axios.get(`${serverURL}/get/${id}`, {
-          headers: {
-            "api-key": secret,
-          },
-        });
+        const response = await axios.get(
+          `${mode == "dev" ? `http://localhost:3000` : serverURL}/get/${id}`,
+          {
+            headers: {
+              "api-key": secret,
+            },
+          }
+        );
         setBlog(response.data.blog);
         setLoading(false);
       } catch (error) {
