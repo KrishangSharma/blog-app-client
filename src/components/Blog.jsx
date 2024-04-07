@@ -28,6 +28,7 @@ const Blog = () => {
           }
         );
         setBlog(response.data.blog);
+        document.title = `${response.data.blog.shortTitle} | Blog by Krishang Sharma`;
         setLoading(false);
       } catch (error) {
         console.error("Error fetching blog:", error);
