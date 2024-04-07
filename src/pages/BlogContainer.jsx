@@ -37,7 +37,7 @@ const BlogContainer = () => {
     <div className="w-full my-10">
       <div className="px-3 md:w-4/6 md:px-0 mx-auto flex flex-col gap-10">
         <h1 className="text-4xl font-bold">
-          <span className="text-primary">Blogs</span>
+          <span className="text-primary">Recent Posts</span>
         </h1>
         {loading ? (
           <div className="w-full h-20 flex items-center justify-center ">
@@ -69,6 +69,7 @@ const BlogContainer = () => {
               <BlogCard
                 key={index}
                 title={blog.title}
+                shortTitle={blog.shortTitle}
                 id={blog._id}
                 dateAdded={blog.createdAt}
                 desc={blog.description}

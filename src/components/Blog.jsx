@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const Blog = () => {
-  const { id } = useParams();
+  const { shortTitle } = useParams();
   const [loading, setLoading] = useState(false);
   const [blog, setBlog] = useState({ content: "", images: [] });
 
@@ -18,7 +18,9 @@ const Blog = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `${mode == "dev" ? `http://localhost:3000` : serverURL}/get/${id}`,
+          `${
+            mode == "dev" ? `http://localhost:3000` : serverURL
+          }/get/${shortTitle}`,
           {
             headers: {
               "api-key": secret,
@@ -33,7 +35,7 @@ const Blog = () => {
     }
 
     getBlogById();
-  }, [id, serverURL, secret]);
+  }, [shortTitle, serverURL, secret]);
 
   // Function to replace {IMG} placeholders with <img> tags
   function replaceImgPlaceholders(content, images) {

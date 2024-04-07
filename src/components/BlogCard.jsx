@@ -1,8 +1,9 @@
 // Module Imports
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import EastIcon from "@mui/icons-material/East";
 
-const BlogCard = ({ title, desc, dateAdded, id }) => {
+const BlogCard = ({ title, shortTitle, desc, dateAdded }) => {
   const timestamp = dateAdded;
   const dateObject = new Date(timestamp);
 
@@ -15,15 +16,19 @@ const BlogCard = ({ title, desc, dateAdded, id }) => {
   return (
     <div className="blog-card">
       <div className="w-full flex flex-col items-start justify-between gap-1 md:flex-row">
-        <Link
-          to={`/blog/${id}`}
-          className="md:w-5/6 text-xl font-semibold hover:text-accent underline transition ease-in-out "
-        >
+        <h2 className="md:w-5/6 text-xl font-semibold transition ease-in-out ">
           {title}
-        </Link>
+        </h2>
         <span className="text-gray md:w-1/6 text-right ">{formattedDate}</span>
       </div>
       <p className="text-sm text-gray">{desc}</p>
+      <Link
+        to={`blogs/${shortTitle}`}
+        className="w-40 text-gray flex items-center gap-1 hover:gap-2 hover:text-primary transition-all"
+      >
+        <p>Read More &nbsp;</p>
+        <EastIcon />{" "}
+      </Link>
     </div>
   );
 };
@@ -32,7 +37,7 @@ export default BlogCard;
 
 // Prop Validations
 BlogCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  shortTitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   dateAdded: PropTypes.string.isRequired,

@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<BlogContainer />} />
-          <Route path="/blog/:id" exact element={<Blog />} />
+          <Route path="/blogs/:shortTitle" exact element={<Blog />} />
         </Routes>
         <Footer />
       </Router>
