@@ -67,11 +67,13 @@ const Blog = () => {
   return (
     <div className="w-full mb-10 blog-container">
       <div className="w-full mb-4 bg-black overflow-hidden">
-        <img
-          src={blog.coverImage}
-          alt="Join me on my journey to code!"
-          className="w-full object-cover"
-        />
+        {loading ? null : (
+          <img
+            src={blog.coverImage}
+            alt="Join me on my journey to code!"
+            className="w-full object-cover"
+          />
+        )}
       </div>
       <div className="w-full px-3 md:w-4/6 md:p-0 mx-auto">
         {loading ? (
