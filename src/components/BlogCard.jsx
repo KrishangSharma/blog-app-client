@@ -21,7 +21,9 @@ const BlogCard = ({ title, shortTitle, desc, dateAdded }) => {
         </h2>
         <span className="text-gray md:w-1/6 text-right ">{formattedDate}</span>
       </div>
-      <p className="text-sm text-gray">{desc}</p>
+      <div className="h-10 overflow-hidden line-clamp-2 md:h-auto md:overflow-visible md:line-clamp-none">
+        <p className="text-sm text-gray">{desc}</p>
+      </div>
       <Link
         to={`blogs/${shortTitle}`}
         className="w-40 text-gray flex items-center gap-1 hover:gap-2 hover:text-primary transition-all"

@@ -35,7 +35,7 @@ const BlogContainer = () => {
 
   return (
     <div className="w-full my-10">
-      <div className="px-3 md:w-4/6 md:px-0 mx-auto flex flex-col gap-10">
+      <div className="px-3 md:w-4/6 md:px-0 mx-auto flex flex-col gap-6">
         <h1 className="text-4xl font-bold">
           <span className="text-primary">Recent Posts</span>
         </h1>
