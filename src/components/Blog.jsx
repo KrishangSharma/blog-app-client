@@ -28,7 +28,12 @@ const Blog = () => {
           }
         );
         setBlog(response.data.blog);
-        document.title = `${response.data.blog.shortTitle} | Blog by Krishang Sharma`;
+        console.log(blog);
+        var title = response.data.blog.shortTitle;
+        const pageTitle = title
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, (char) => char.toUpperCase());
+        document.title = `${pageTitle} | Blog by Krishang Sharma`;
         setLoading(false);
       } catch (error) {
         console.error("Error fetching blog:", error);
@@ -60,7 +65,14 @@ const Blog = () => {
     .padStart(2, "0")}-${dateObject.getUTCFullYear().toString().slice(-2)}`;
 
   return (
-    <div className="w-full my-10 blog-container">
+    <div className="w-full mb-10 blog-container">
+      <div className="w-full mb-4 bg-black overflow-hidden">
+        <img
+          src={blog.coverImage}
+          alt="Join me on my journey to code!"
+          className="w-full object-cover"
+        />
+      </div>
       <div className="w-full px-3 md:w-4/6 md:p-0 mx-auto">
         {loading ? (
           <div className="w-full h-20 flex items-center justify-center ">
